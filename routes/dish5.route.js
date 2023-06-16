@@ -5,9 +5,9 @@ const { dish5Model } = require("../models/dish5.model")
 
 const dish5Router=express.Router()
 
-dish5Router.get("/dish5",async(req,res)=>{
+dish5Router.get("/",async(req,res)=>{
     try {
-        const data=dish5Model.find()
+        const data=await dish5Model.find()
         res.send({data})
     } catch (error) {
         
